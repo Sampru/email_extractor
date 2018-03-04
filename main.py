@@ -8,7 +8,6 @@ CONTROLLER = connection_controller.Connection_controller()
 
 def login():
     logged = False
-    conn = None
     while not logged:
         try:
             uname = input('Usuario: ')
@@ -20,7 +19,6 @@ def login():
         except imaplib.IMAP4.error:
             print('Credenciales incorrectas')
             logged = False
-    return conn
 
 
 def search():
